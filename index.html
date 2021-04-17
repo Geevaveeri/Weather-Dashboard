@@ -6,12 +6,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+    <nav>
+        <div class="nav-wrapper purple darken-3">
+            <a href="#" class="brand-logo center">Weather Dashboard</a>
+        </div>
+    </nav>
+    <main>
+        <div class="row">
+            <!-- side search bar and history -->
+            <div class="col s2">
+                <!-- Grey navigation panel -->
+                <form class="search-form">
+                    <h3 class = "bold">Search for a city:</h3>
+                    <textarea name="cityName" id="cityName" cols="5" rows="5"></textarea>
+                    <a class="waves-effect waves-light btn purple"><i class="material-icons right">cloud</i>Search</a>
+                </form>
+                <br>
 
+                <div class="border"></div>
 
+                <br>
+
+                <ul class="collection ">
+                    <li class="collection-item grey "></li>
+                </ul>
+            </div>
+            <!-- current day weather information -->
+            <div class="col s10">
+                <!-- purple page content  -->
+                <div class="current-weather-container">
+                    <h3 class="city-date bold">atlanta</h3>
+                    <p class="temperature-txt padding">74</p>
+                    <P class="wind-txt padding">6.6</P>
+                    <p class="humidity-txt padding">46</p>
+                    <p class="uv-text padding">0.47</p>
+
+                </div>
+            </div>
+            <!-- 5 day weather information -->
+            <div class="5-day col s10">
+                <h4 class ="five-day-header bold">5-Day Forcast:</h4>
+                <div class="row">
+                    <div class="col s2">
+                      <div class="card-panel purple">
+                        <h6 class="white-text padding bold">3/31/2021</h6>
+                        <i class = "material-icons">wb_sunny</i>
+                        <p class="white-text padding five-day-temp">73</p>
+                        <p class="white-text padding five-day-wind">9.53</p>
+                        <p class="white-text padding five-day-humid">66</p>
+                      </div>
+                    </div>
+                    <div class="col s2">
+                        <div class="card-panel purple">
+                          <h6 class="white-text padding bold">3/31/2021</h6>
+                          <i class = "material-icons">wb_sunny</i>
+                          <p class="white-text padding five-day-temp">73</p>
+                          <p class="white-text padding five-day-wind">9.53</p>
+                          <p class="white-text padding five-day-humid">66</p>
+                        </div>
+                      </div> <div class="col s2">
+                        <div class="card-panel purple">
+                          <h6 class="white-text padding bold">3/31/2021</h6>
+                          <i class = "material-icons">wb_sunny</i>
+                          <p class="white-text padding five-day-temp">73</p>
+                          <p class="white-text padding five-day-wind">9.53</p>
+                          <p class="white-text padding five-day-humid">66</p>
+                        </div>
+                      </div> <div class="col s2">
+                        <div class="card-panel purple">
+                          <h6 class="white-text padding bold">3/31/2021</h6>
+                          <i class = "material-icons">wb_sunny</i>
+                          <p class="white-text padding five-day-temp">73</p>
+                          <p class="white-text padding five-day-wind">9.53</p>
+                          <p class="white-text padding five-day-humid">66</p>
+                        </div>
+                      </div> <div class="col s2">
+                        <div class="card-panel purple">
+                          <h6 class="white-text padding bold">3/31/2021</h6>
+                          <i class = "material-icons">wb_sunny</i>
+                          <p class="white-text padding five-day-temp">73</p>
+                          <p class="white-text padding five-day-wind">9.53</p>
+                          <p class="white-text padding five-day-humid">66</p>
+                        </div>
+                      </div>
+                  </div>
+                  
+            </div>
+
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 

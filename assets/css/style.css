@@ -3,4 +3,34 @@
     Margin: 0;
     Padding: 0;
     }
+
+    textarea {
+        resize: none;
+      }
+
+.btn {
+    width: 100%;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.current-weather-container {
+    border: solid 1px;
+    font-size: large;
+    margin-top: 20px;
     
+}
+
+.padding {
+    padding: 5px;
+}
+
+.city-date {
+    margin: 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
