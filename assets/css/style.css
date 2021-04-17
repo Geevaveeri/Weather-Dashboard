@@ -4,9 +4,9 @@
     Padding: 0;
     }
 
-    textarea {
+textarea {
         resize: none;
-      }
+}
 
 .btn {
     width: 100%;
@@ -33,4 +33,16 @@
 
 .bold {
     font-weight: bold;
+}
+
+#searchBtn {
+    margin-top: 10px;
+}
+
+#cityName{
+    padding-bottom: 5px;
+}
+
+.five-day-panel {
+    padding-top: 0px;
 }

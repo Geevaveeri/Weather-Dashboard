@@ -2,107 +2,115 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper purple darken-3">
-            <a href="#" class="brand-logo center">Weather Dashboard</a>
+  <nav>
+    <div class="nav-wrapper purple darken-3">
+      <a href="#" class="brand-logo center">Weather Dashboard</a>
+    </div>
+  </nav>
+  <main>
+    <div class="row">
+      <!-- side search bar and history -->
+      <div class="col s2">
+
+        <form class="search-form">
+
+          <h3 class="bold">Search for a city:</h3>
+          <input type="text" id="cityName" name="cityName" class="browser-default ">
+          <br>
+          <button class="btn waves-effect waves-light purple " id="searchBtn" type="submit" name="action">Search
+            <i class="material-icons right">cloud</i>
+          </button>
+        </form>
+        <br>
+        <br>
+
+        <div class="border "></div>
+
+        <br>
+
+        <ul class="collection ">
+
+        </ul>
+      </div>
+      <!-- current day weather information -->
+      <div class="col s10">
+
+        <div class="current-weather-container">
+          <h3 class="city-date bold"></h3>
+          <p class="temperature-txt padding"></p>
+          <P class="wind-txt padding"></P>
+          <p class="humidity-txt padding"></p>
+          <p class="uv-text padding"></p>
+
         </div>
-    </nav>
-    <main>
+      </div>
+      <!-- 5 day weather information -->
+      <div class="5-day col s10">
+        <h4 class="five-day-header bold ">5-Day Forcast:</h4>
         <div class="row">
-            <!-- side search bar and history -->
-            <div class="col s2">
-                <!-- Grey navigation panel -->
-                <form class="search-form">
-                    <h3 class = "bold">Search for a city:</h3>
-                    <textarea name="cityName" id="cityName" cols="5" rows="5"></textarea>
-                    <a class="waves-effect waves-light btn purple"><i class="material-icons right">cloud</i>Search</a>
-                </form>
-                <br>
-
-                <div class="border"></div>
-
-                <br>
-
-                <ul class="collection ">
-                    <li class="collection-item grey "></li>
-                </ul>
+          <div class="col s2">
+            <div class="card-panel  blue darken-2 five-day-panel">
+              <h6 id="first-day-date" class="white-text padding bold"></h6>
+              <i id="first-icon-container"></i>
+              <p id="first-day-temp" class="white-text padding five-day-temp"></p>
+              <p id="first-day-wind" class="white-text padding five-day-wind"></p>
+              <p id="first-day-humid" class="white-text padding five-day-humid"></p>
             </div>
-            <!-- current day weather information -->
-            <div class="col s10">
-                <!-- purple page content  -->
-                <div class="current-weather-container">
-                    <h3 class="city-date bold">atlanta</h3>
-                    <p class="temperature-txt padding">74</p>
-                    <P class="wind-txt padding">6.6</P>
-                    <p class="humidity-txt padding">46</p>
-                    <p class="uv-text padding">0.47</p>
-
-                </div>
+          </div>
+          <div class="col s2">
+            <div class="card-panel  blue darken-2 five-day-panel">
+              <h6 id="second-day-date" class="white-text padding bold"></h6>
+              <i id="second-icon-container"></i>
+              <p id="second-day-temp" class="white-text padding five-day-temp"></p>
+              <p id="second-day-wind" class="white-text padding five-day-wind"></p>
+              <p id="second-day-humid" class="white-text padding five-day-humid"></p>
             </div>
-            <!-- 5 day weather information -->
-            <div class="5-day col s10">
-                <h4 class ="five-day-header bold">5-Day Forcast:</h4>
-                <div class="row">
-                    <div class="col s2">
-                      <div class="card-panel purple">
-                        <h6 class="white-text padding bold">3/31/2021</h6>
-                        <i class = "material-icons">wb_sunny</i>
-                        <p class="white-text padding five-day-temp">73</p>
-                        <p class="white-text padding five-day-wind">9.53</p>
-                        <p class="white-text padding five-day-humid">66</p>
-                      </div>
-                    </div>
-                    <div class="col s2">
-                        <div class="card-panel purple">
-                          <h6 class="white-text padding bold">3/31/2021</h6>
-                          <i class = "material-icons">wb_sunny</i>
-                          <p class="white-text padding five-day-temp">73</p>
-                          <p class="white-text padding five-day-wind">9.53</p>
-                          <p class="white-text padding five-day-humid">66</p>
-                        </div>
-                      </div> <div class="col s2">
-                        <div class="card-panel purple">
-                          <h6 class="white-text padding bold">3/31/2021</h6>
-                          <i class = "material-icons">wb_sunny</i>
-                          <p class="white-text padding five-day-temp">73</p>
-                          <p class="white-text padding five-day-wind">9.53</p>
-                          <p class="white-text padding five-day-humid">66</p>
-                        </div>
-                      </div> <div class="col s2">
-                        <div class="card-panel purple">
-                          <h6 class="white-text padding bold">3/31/2021</h6>
-                          <i class = "material-icons">wb_sunny</i>
-                          <p class="white-text padding five-day-temp">73</p>
-                          <p class="white-text padding five-day-wind">9.53</p>
-                          <p class="white-text padding five-day-humid">66</p>
-                        </div>
-                      </div> <div class="col s2">
-                        <div class="card-panel purple">
-                          <h6 class="white-text padding bold">3/31/2021</h6>
-                          <i class = "material-icons">wb_sunny</i>
-                          <p class="white-text padding five-day-temp">73</p>
-                          <p class="white-text padding five-day-wind">9.53</p>
-                          <p class="white-text padding five-day-humid">66</p>
-                        </div>
-                      </div>
-                  </div>
-                  
+          </div>
+          <div class="col s2">
+            <div class="card-panel  blue darken-2 five-day-panel">
+              <h6 id="third-day-date" class="white-text padding bold"></h6>
+              <i id="third-icon-container"></i>
+              <p id="third-day-temp" class="white-text padding five-day-temp"></p>
+              <p id="third-day-wind" class="white-text padding five-day-wind"></p>
+              <p id="third-day-humid" class="white-text padding five-day-humid"></p>
             </div>
-
+          </div>
+          <div class="col s2">
+            <div class="card-panel  blue darken-2 five-day-panel">
+              <h6 id="fourth-day-date" class="white-text padding bold"></h6>
+              <i id="fourth-icon-container"></i>
+              <p id="fourth-day-temp" class="white-text padding five-day-temp"></p>
+              <p id="fourth-day-wind" class="white-text padding five-day-wind"></p>
+              <p id="fourth-day-humid" class="white-text padding five-day-humid"></p>
+            </div>
+          </div>
+          <div class="col s2">
+            <div class="card-panel  blue darken-2 five-day-panel">
+              <h6 id="fifth-day-date" class="white-text padding bold"></h6>
+              <i id="fifth-icon-container"></i>
+              <p id="fifth-day-temp" class="white-text padding five-day-temp"></p>
+              <p id="fifth-day-wind" class="white-text padding five-day-wind"></p>
+              <p id="fifth-day-humid" class="white-text padding five-day-humid"></p>
+            </div>
+          </div>
         </div>
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+
+      </div>
+
+    </div>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
