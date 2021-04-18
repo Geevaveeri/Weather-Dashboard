@@ -278,6 +278,10 @@ var saveHistory = function () {
 
 var loadHistory = function () {
     historyList = JSON.parse(localStorage.getItem("history"));
+    
+    if (!historyList) {
+        tasks = {};
+    }
     historyLength = Object.keys(historyList).length;
     console.log(history.length);
     for (var i = 0; i < historyLength; i++) {
@@ -294,7 +298,7 @@ var loadHistory = function () {
 
     }
 
-}
+};
 
 // function to create the search
 var searchHistory = function (event) {
