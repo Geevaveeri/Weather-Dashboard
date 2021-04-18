@@ -280,7 +280,7 @@ var loadHistory = function () {
     historyList = JSON.parse(localStorage.getItem("history"));
     
     if (!historyList) {
-        tasks = {};
+        historyList = {};
     }
     historyLength = Object.keys(historyList).length;
     console.log(history.length);
